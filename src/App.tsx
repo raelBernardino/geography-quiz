@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import './App.css';
+import LoginPortal from './components/LoginPortal';
 
 const Container = styled.div`
   width: 100%;
@@ -15,7 +16,8 @@ const Container = styled.div`
 function App() {
   return (
     <Container>
-      <h1>geogrow</h1>
+      <LoginPortal />
+      {/* <h1>geogrow</h1> */}
     </Container>
   );
 }
