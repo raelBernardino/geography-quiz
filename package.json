@@ -1,0 +1,26 @@
+{
+  "name": "geographyquiz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "client": "cd client && nodemon start",
+    "server": "cd server && nodemon start",
+    "dev": "npm run client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raelBernardino/geography-quiz.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raelBernardino/geography-quiz/issues"
+  },
+  "homepage": "https://github.com/raelBernardino/geography-quiz#readme",
+  "dependencies": {
+    "concurrently": "^6.3.0",
+    "nodemon": "^2.0.14"
+  }
+}
