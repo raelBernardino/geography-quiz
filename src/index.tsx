@@ -1,35 +1,33 @@
-import React from 'react';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
 
-declare module '@mui/material/styles' {
+declare module "@mui/material/styles" {
   interface Palette {
     palette: {
       primary: {
-        main: string,
-        light: string
-      }
-    }
+        main: string;
+        light: string;
+      };
+    };
   }
   interface PaletteOptions {
     palette?: {
       primary?: {
-        main?: string,
-        light?: string,
-      }
-    }
+        main?: string;
+        light?: string;
+      };
+    };
   }
   interface Typography {
     typography: {
       fontFamily: string
-    }
-  }
-  interface TypographyOptions {
-    typography: {
-      fontFamily?: string
+      fontSize?: number
+      fontWeightLight?: number
+      fontWeightHeavy?: number
     }
   }
 }
@@ -38,7 +36,7 @@ const theme = createTheme({
   palette: {
     primary: {
       main: "#FFCD1B",
-      light: "#FAF1D3"
+      light: "#FAF1D3",
     },
     secondary: {
       main: "#7C684B",
@@ -46,7 +44,9 @@ const theme = createTheme({
     }
   },
   typography: {
-    fontFamily: 'Poppins, sans-serif'
+    fontFamily: 'Poppins, sans-serif',
+    fontWeightLight: 300,
+    fontWeightMedium: 700
   }
 })
 
@@ -56,7 +56,7 @@ ReactDOM.render(
       <App />
     </ThemeProvider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
