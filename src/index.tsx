@@ -22,6 +22,14 @@ declare module "@mui/material/styles" {
       };
     };
   }
+  interface Typography {
+    typography: {
+      fontFamily: string
+      fontSize?: number
+      fontWeightLight?: number
+      fontWeightHeavy?: number
+    }
+  }
 }
 
 const theme = createTheme({
@@ -32,10 +40,15 @@ const theme = createTheme({
     },
     secondary: {
       main: "#7C684B",
-      light: "#BFAD93",
-    },
+      light: "#BFAD93"
+    }
   },
-});
+  typography: {
+    fontFamily: 'Poppins, sans-serif',
+    fontWeightLight: 300,
+    fontWeightMedium: 700
+  }
+})
 
 ReactDOM.render(
   <React.StrictMode>
