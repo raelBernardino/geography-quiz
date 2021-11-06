@@ -22,6 +22,16 @@ declare module '@mui/material/styles' {
       }
     }
   }
+  interface Typography {
+    typography: {
+      fontFamily: string
+    }
+  }
+  interface TypographyOptions {
+    typography: {
+      fontFamily?: string
+    }
+  }
 }
 
 const theme = createTheme({
@@ -34,6 +44,9 @@ const theme = createTheme({
       main: "#7C684B",
       light: "#BFAD93"
     }
+  },
+  typography: {
+    fontFamily: 'Poppins, sans-serif'
   }
 })
 
