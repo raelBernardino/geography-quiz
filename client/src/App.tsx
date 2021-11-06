@@ -18,7 +18,6 @@ function App() {
   return (
     <Container>
       <LoginPortal />
-      {/* <h1>geogrow</h1> */}
     </Container>
   );
 }

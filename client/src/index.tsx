@@ -1,5 +1,5 @@
 import React from "react";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { ThemeProvider } from "@mui/material/styles";
 import {
   ApolloClient,
   InMemoryCache,
@@ -11,57 +11,12 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-
-declare module "@mui/material/styles" {
-  interface Palette {
-    palette: {
-      primary: {
-        main: string;
-        light: string;
-      };
-    };
-  }
-  interface PaletteOptions {
-    palette?: {
-      primary?: {
-        main?: string;
-        light?: string;
-      };
-    };
-  }
-  interface Typography {
-    typography: {
-      fontFamily: string
-      fontSize?: number
-      fontWeightLight?: number
-      fontWeightHeavy?: number
-    }
-  }
-}
-
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: "#FFCD1B",
-      light: "#FAF1D3",
-    },
-    secondary: {
-      main: "#7C684B",
-      light: "#BFAD93"
-    }
-  },
-  typography: {
-    fontFamily: 'Poppins, sans-serif',
-    fontWeightLight: 300,
-    fontWeightMedium: 700
-  }
-})
+import theme from "./theme"
 
 const client = new ApolloClient({
-  uri: 'https://48p1r2roz4.sse.codesandbox.io',
-  cache: new InMemoryCache()
-})
-
+  uri: "https://48p1r2roz4.sse.codesandbox.io",
+  cache: new InMemoryCache(),
+});
 
 ReactDOM.render(
   <React.StrictMode>
