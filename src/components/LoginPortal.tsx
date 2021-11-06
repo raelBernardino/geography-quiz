@@ -9,7 +9,7 @@ import { TextField } from "@mui/material";
 const GeoButton = styled(Button)({
   color: "#7C684B",
   // fontWeight: "700",
-  backgroundColor: "red",
+  // backgroundColor: "red",
   padding: 10,
 });
 
@@ -22,15 +22,25 @@ const LoginPanel = styled.div`
 
 function LoginPortal() {
   return (
-    <Stack spacing={2}>
-      <TextField id="outlined-basic" label="Email" placeholder="Email" />
-      <TextField
-        id="outlined-basic"
-        label="Password"
-        placeholder="Enter password"
-      />
-      <GeoButton>Login</GeoButton>
-    </Stack>
+    <Box
+      sx={{
+        boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
+        padding: 5,
+        borderRadius: 2,
+        border: 1,
+        borderColor: "#BFAD93",
+      }}
+    >
+      <Stack spacing={2}>
+        <TextField id="outlined-basic" label="Email" placeholder="Email" />
+        <TextField
+          id="outlined-basic"
+          label="Password"
+          placeholder="Enter password"
+        />
+        <GeoButton variant="contained">Login</GeoButton>
+      </Stack>
+    </Box>
   );
 }
 
