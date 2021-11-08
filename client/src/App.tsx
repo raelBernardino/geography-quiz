@@ -1,7 +1,7 @@
 // import React from 'react';
 import { styled } from '@mui/system';
 import './App.css';
-import LoginPortal from './components/LoginPortal';
+import LoginPage from './components/LoginPage';
 
 const Container = styled('div')({
   width: "100%",
@@ -17,7 +17,7 @@ const Container = styled('div')({
 function App() {
   return (
     <Container>
-      <LoginPortal />
+      <LoginPage />
     </Container>
   );
 }
