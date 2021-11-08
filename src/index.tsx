@@ -1,30 +1,16 @@
 import React from "react";
 import { ThemeProvider } from "@mui/material/styles";
-import {
-  ApolloClient,
-  InMemoryCache,
-  ApolloProvider,
-  useQuery,
-  gql,
-} from "@apollo/client";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import theme from "./theme"
 
-const client = new ApolloClient({
-  uri: "https://48p1r2roz4.sse.codesandbox.io",
-  cache: new InMemoryCache(),
-});
-
 ReactDOM.render(
   <React.StrictMode>
-    <ApolloProvider client={client}>
-      <ThemeProvider theme={theme}>
-        <App />
-      </ThemeProvider>
-    </ApolloProvider>
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
