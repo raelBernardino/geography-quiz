@@ -1,13 +1,15 @@
-import React from "react";
-import styled from "styled-components";
-import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import Stack from "@mui/material/Stack";
-import Input from "@mui/material/Input";
-import { TextField, Typography } from "@mui/material";
-import { NONAME } from "dns";
-import theme from "../theme";
-import { palette } from "@mui/system";
+// import React from "react";
+// import theme from "../theme";
+import {
+  Box,
+  Button,
+  Stack,
+  Input,
+  TextField,
+  Typography,
+} from "@mui/material";
+import { styled } from "@mui/system";
+import loginBackground from "../assets/geo-bg.jpeg";
 
 const GeoButton = styled(Button)({
   color: "#7C684B",
@@ -21,15 +23,15 @@ const InputField = styled(TextField)({
   textTransform: "none",
 });
 
-const ParentDiv = styled.div`
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 100vh;
-  background-image: url("https://images.unsplash.com/photo-1579818191104-014df427aa52?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1180&q=80");
-  background-size: cover;
-  box-shadow: inset 0 0 0 2000px rgba(124, 104, 75, 0.75);
-`;
+const ParentDiv = styled("div")({
+  display: "flex",
+  justifyContent: "center",
+  width: "100%",
+  height: "100vh",
+  backgroundImage: `url(${loginBackground})`,
+  backgroundSize: "cover",
+  boxShadow: "inset 0 0 0 2000px rgba(124, 104, 75, 0.75)",
+});
 
 function LoginPortal() {
   const welcomeText = "Welcome \n to Geogrow";
@@ -50,7 +52,7 @@ function LoginPortal() {
               border: 1,
               borderColor: "#BFAD93",
               backgroundColor: "white",
-              width: "30%"
+              width: "30%",
             }}
           >
             <Typography
