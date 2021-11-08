@@ -10,14 +10,7 @@ import {
 } from "@mui/material";
 import { styled } from "@mui/system";
 import loginBackground from "../assets/geo-bg.jpeg";
-
-const GeoButton = styled(Button)({
-  color: "#7C684B",
-  // fontWeight: "700",
-  // backgroundColor: "red",
-  padding: 10,
-  textTransform: "none",
-});
+import LoginPanel from "./LoginPanel";
 
 const InputField = styled(TextField)({
   textTransform: "none",
@@ -33,7 +26,7 @@ const ParentDiv = styled("div")({
   boxShadow: "inset 0 0 0 2000px rgba(124, 104, 75, 0.75)",
 });
 
-function LoginPortal() {
+function LoginPage() {
   const welcomeText = "Welcome \n to Geogrow";
   return (
     <ParentDiv>
@@ -65,24 +58,7 @@ function LoginPortal() {
             >
               {welcomeText}
             </Typography>
-            <Stack spacing={2}>
-              <InputField
-                id="outlined-basic"
-                label="username"
-                placeholder="username"
-              />
-              <InputField
-                id="outlined-basic"
-                label="email"
-                placeholder="email"
-              />
-              <InputField
-                id="outlined-basic"
-                label="password"
-                placeholder="enter password"
-              />
-              <GeoButton variant="contained">login</GeoButton>
-            </Stack>
+            <LoginPanel />
           </Box>
           <Stack spacing={2} width="50%" display="flex" justifyContent="center">
             <Typography
@@ -106,4 +82,4 @@ function LoginPortal() {
   );
 }
 
-export default LoginPortal;
+export default LoginPage;
