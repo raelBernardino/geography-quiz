@@ -6,6 +6,8 @@ declare module "@mui/material/styles" {
       primary: {
         main: string;
         light: string;
+        dark?: string;
+        contrastText?: string;
       };
     };
   }
@@ -22,7 +24,7 @@ declare module "@mui/material/styles" {
 }
 
 interface Typography {
-  typography: {
+  typography?: {
     fontFamily: string;
     fontSize?: number;
     fontWeightLight?: number;
@@ -35,7 +37,7 @@ const theme = createTheme({
     primary: {
       main: "#FFCD1B",
       light: "#FAF1D3",
-      dark: "#7C684B",
+      contrastText: "#7C684B",
     },
     secondary: {
       main: "#FFF7E8",

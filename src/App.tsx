@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 import { styled } from '@mui/system';
 import { collection, getDocs } from 'firebase/firestore/lite';
-import LoginPortal from './components/LoginPortal';
 import { db } from './firebase'
+import LoginPage from './components/LoginPage';
+import './App.css';
 
 const Container = styled('div')({
   width: "100%",
@@ -27,7 +28,7 @@ function App() {
   }, [])
   return (
     <Container>
-      <LoginPortal />
+      <LoginPage />
     </Container>
   );
 }
