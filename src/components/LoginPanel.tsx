@@ -3,6 +3,8 @@ import { Button, TextField, Stack } from "@mui/material";
 import { styled } from "@mui/system";
 import { useFormik } from "formik";
 import * as yup from "yup";
+import { getAuth } from 'firebase/auth'
+import { signInWithGoogle } from "../firebase";
 import googleButtonIcon from "../assets/google-logo.svg";
 
 function LoginPanel() {
@@ -64,7 +66,6 @@ function LoginPanel() {
       }}
       onSubmit={(values, { setSubmitting }) => {
         setTimeout(() => {
-          alert(JSON.stringify(values, null, 2));
           setSubmitting(false);
         }, 400);
       }}
