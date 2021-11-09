@@ -3,6 +3,7 @@ import { Button, TextField, Stack } from "@mui/material";
 import { styled } from "@mui/system";
 import { useFormik } from "formik";
 import * as yup from "yup";
+import googleButtonIcon from "../assets/google-logo.svg";
 
 function LoginPanel() {
   const InputField = styled(TextField)({
@@ -15,6 +16,13 @@ function LoginPanel() {
     "&:hover": {
       color: "#FAF1D3",
     },
+  });
+
+  const GoogleButton = styled(Button)({
+    padding: 12,
+    textTransform: "none",
+    color: "#717171",
+    fontWeight: "normal",
   });
 
   const validationSchema = yup.object({
@@ -96,6 +104,12 @@ function LoginPanel() {
         />
         <ErrorMessage name="password" component="input" />
         <GeoButton variant="contained">login</GeoButton>
+        <GoogleButton variant="outlined">
+          <Stack spacing={2} direction="row">
+            <img src={googleButtonIcon} />
+            <span>Continue with Google</span>
+          </Stack>
+        </GoogleButton>
       </Stack>
     </Formik>
   );
